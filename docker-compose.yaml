@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  doge-node:
+    build:
+      context: .
+    restart: always
+    ports:
+      - 9998:9998
+      - 9999:9999
+      - 19998:19998
+      - 19999:19999
+    volumes:
+      - .dogecoin:/root/.dogecoin
